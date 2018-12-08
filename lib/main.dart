@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:hockey_stats/pages/dashboard.dart';
+import 'package:hockey_stats/pages/stats.dart';
+import 'package:hockey_stats/pages/addgame.dart';
 
 void main() => runApp(StatsApp());
 
@@ -19,7 +22,7 @@ class StatsApp extends StatelessWidget {
         // or simply save your changes to "hot reload" in a Flutter IDE).
         // Notice that the counter didn't reset back to zero; the application
         // is not restarted.
-        primarySwatch: Colors.green,
+        primarySwatch: Colors.purple,
       ),
 
       home: MainPage(title: 'Dashboard'),
@@ -77,9 +80,9 @@ class _MainPageState extends State<MainPage> {
       ),
       body: new PageView(
           children: [
-            new Container(color: Colors.white),
-            new Container(color: Colors.black87),
-            new Container(color: Colors.white)
+            new Dashboard(),
+            new Stats(),
+            new AddGame()
           ]
       ),
 
