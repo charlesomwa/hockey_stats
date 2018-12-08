@@ -7,6 +7,18 @@ void main() => runApp(StatsApp());
 
 class StatsApp extends StatelessWidget {
   // This widget is the root of your application.
+  Color green = Colors.greenAccent[400];
+  Color orange = Colors.orangeAccent[400];
+  Color red = Colors.redAccent[400];
+  Color blue = Colors.redAccent[100];
+  Color purple = Colors.purpleAccent[400];
+  Color yellow = Colors.yellowAccent[400];
+  Color lime = Colors.limeAccent[400];
+  Color teal = Colors.tealAccent[400];
+  Color cyan = Colors.cyanAccent[400];
+  Color black = Colors.grey[850];
+
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -22,7 +34,15 @@ class StatsApp extends StatelessWidget {
         // or simply save your changes to "hot reload" in a Flutter IDE).
         // Notice that the counter didn't reset back to zero; the application
         // is not restarted.
-        primarySwatch: Colors.purple,
+        //primarySwatch: Colors.black,
+        //brightness: Brightness.dark,
+        primaryColor: black,
+        accentColor: green,
+        textTheme: TextTheme(
+          headline: TextStyle(fontSize: 48.0, fontWeight: FontWeight.w900, fontFamily: 'Monsterrat'),
+          title: TextStyle(fontSize: 36.0, fontWeight: FontWeight.bold, fontFamily: 'Monsterrat'),
+          body1: TextStyle(fontSize: 14.0, fontFamily: 'Monsterrat'),
+        ),
       ),
 
       home: MainPage(title: 'Dashboard'),
@@ -51,18 +71,15 @@ class MainPage extends StatefulWidget {
 }
 
 class _MainPageState extends State<MainPage> {
-  int _counter = 0;
+  int _page = 0;
 
-  void _incrementCounter() {
-    setState(() {
-      // This call to setState tells the Flutter framework that something has
-      // changed in this State, which causes it to rerun the build method below
-      // so that the display can reflect the updated values. If we changed
-      // _counter without calling setState(), then the build method would not be
-      // called again, and so nothing would appear to happen.
-      _counter++;
-    });
-  }
+  var pages = [
+    "Dashboard",
+    "Statistics",
+    "New Game"
+  ];
+
+  void _handlePageChange(int context) => setState(() => _page = context);
 
   @override
   Widget build(BuildContext context) {
@@ -76,14 +93,16 @@ class _MainPageState extends State<MainPage> {
       appBar: AppBar(
         // Here we take the value from the MyHomePage object that was created by
         // the App.build method, and use it to set our appbar title.
-        title: Text(widget.title),
+        title: Text(pages[_page], style: new TextStyle(fontFamily: 'Monsterrat', fontWeight: FontWeight.w900),),
       ),
       body: new PageView(
           children: [
             new Dashboard(),
             new Stats(),
             new AddGame()
-          ]
+          ],
+
+          onPageChanged: _handlePageChange,
       ),
 
 
@@ -119,7 +138,7 @@ class _MainPageState extends State<MainPage> {
         ),
       ),*/
       floatingActionButton: FloatingActionButton(
-        onPressed: _incrementCounter,
+        //onPressed: _incrementCounter,
         tooltip: 'Add New Game',
         child: Icon(Icons.add),
       ), // This trailing comma makes auto-formatting nicer for build methods.

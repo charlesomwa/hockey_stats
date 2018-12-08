@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
 
 class Dashboard extends StatelessWidget {
+
   @override
   Widget build(BuildContext context) => new Container(
-      
+
       color: Colors.white,
       child: new Column(
         crossAxisAlignment: CrossAxisAlignment.center,
@@ -14,7 +15,7 @@ class Dashboard extends StatelessWidget {
               size: 150.0,
               color: Colors.black12
           ),
-          new Text('Dashboard')
+          new Text('Dashboard', style: Theme.of(context).textTheme.body1,)
         ],
       )
   );
