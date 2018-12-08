@@ -40,7 +40,7 @@ class StatsApp extends StatelessWidget {
         accentColor: green,
         textTheme: TextTheme(
           headline: TextStyle(fontSize: 48.0, fontWeight: FontWeight.w900, fontFamily: 'Monsterrat'),
-          title: TextStyle(fontSize: 36.0, fontWeight: FontWeight.bold, fontFamily: 'Monsterrat'),
+          title: TextStyle(fontSize: 32.0, fontWeight: FontWeight.bold, fontFamily: 'Monsterrat'),
           body1: TextStyle(fontSize: 14.0, fontFamily: 'Monsterrat'),
         ),
       ),
