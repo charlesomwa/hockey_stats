@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:hockey_stats/pages/dashboard.dart';
 import 'package:hockey_stats/pages/stats.dart';
 import 'package:hockey_stats/pages/addgame.dart';
+import 'package:hockey_stats/util/SimpleButton.dart';
 
 void main() => runApp(StatsApp());
 
@@ -21,6 +22,8 @@ class StatsApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+
+    AppBar();
     return MaterialApp(
       title: 'HockeyStats',
       debugShowCheckedModeBanner: false,
@@ -42,10 +45,13 @@ class StatsApp extends StatelessWidget {
           headline: TextStyle(fontSize: 48.0, fontWeight: FontWeight.w900, fontFamily: 'Monsterrat'),
           title: TextStyle(fontSize: 32.0, fontWeight: FontWeight.bold, fontFamily: 'Monsterrat'),
           body1: TextStyle(fontSize: 14.0, fontFamily: 'Monsterrat'),
+          button: TextStyle(fontSize: 18.0, fontWeight: FontWeight.w700, fontFamily: 'Monsterrat')
         ),
       ),
 
       home: MainPage(title: 'Dashboard'),
+
+
     );
   }
 }
@@ -89,6 +95,7 @@ class _MainPageState extends State<MainPage> {
     // The Flutter framework has been optimized to make rerunning build methods
     // fast, so that you can just rebuild anything that needs updating rather
     // than having to individually change instances of widgets.
+
     return Scaffold(
       appBar: AppBar(
         // Here we take the value from the MyHomePage object that was created by
@@ -99,7 +106,7 @@ class _MainPageState extends State<MainPage> {
           children: [
             new Dashboard(),
             new Stats(),
-            new AddGame()
+            AddGame()
           ],
 
           onPageChanged: _handlePageChange,
@@ -137,6 +144,7 @@ class _MainPageState extends State<MainPage> {
           ],
         ),
       ),*/
+
       floatingActionButton: FloatingActionButton(
         //onPressed: _incrementCounter,
         tooltip: 'Add New Game',
