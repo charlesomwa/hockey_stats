@@ -50,8 +50,8 @@ class _AddGame extends State<AddGame> {
 
           Column(
             children: <Widget>[
-              Text("Hello"
-                
+              Text("Hello",
+                style: Theme.of(context).textTheme.title
               )
 
             ],

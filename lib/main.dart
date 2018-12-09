@@ -11,14 +11,13 @@ class StatsApp extends StatelessWidget {
   Color green = Colors.greenAccent[400];
   Color orange = Colors.orangeAccent[400];
   Color red = Colors.redAccent[400];
-  Color blue = Colors.redAccent[100];
+  Color blue = Colors.blueAccent[100];
   Color purple = Colors.purpleAccent[400];
   Color yellow = Colors.yellowAccent[400];
   Color lime = Colors.limeAccent[400];
   Color teal = Colors.tealAccent[400];
   Color cyan = Colors.cyanAccent[400];
   Color black = Colors.grey[850];
-
 
   @override
   Widget build(BuildContext context) {
@@ -40,7 +39,7 @@ class StatsApp extends StatelessWidget {
         //primarySwatch: Colors.black,
         //brightness: Brightness.dark,
         primaryColor: black,
-        accentColor: green,
+        accentColor: red,
         textTheme: TextTheme(
           headline: TextStyle(fontSize: 48.0, fontWeight: FontWeight.w900, fontFamily: 'Monsterrat'),
           title: TextStyle(fontSize: 32.0, fontWeight: FontWeight.bold, fontFamily: 'Monsterrat'),
@@ -100,7 +99,8 @@ class _MainPageState extends State<MainPage> {
       appBar: AppBar(
         // Here we take the value from the MyHomePage object that was created by
         // the App.build method, and use it to set our appbar title.
-        title: Text(pages[_page], style: new TextStyle(fontFamily: 'Monsterrat', fontWeight: FontWeight.w900),),
+        centerTitle: true,
+        title: Text(pages[_page], textAlign: TextAlign.center ,style: new TextStyle(fontFamily: 'Monsterrat', fontWeight: FontWeight.w900),),
       ),
       body: new PageView(
           children: [
