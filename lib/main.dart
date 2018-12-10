@@ -11,7 +11,7 @@ class StatsApp extends StatelessWidget {
   Color green = Colors.greenAccent[400];
   Color orange = Colors.orangeAccent[400];
   Color red = Colors.redAccent[400];
-  Color blue = Colors.blueAccent[100];
+  Color lightBlue = Colors.lightBlueAccent[400];
   Color purple = Colors.purpleAccent[400];
   Color yellow = Colors.yellowAccent[400];
   Color lime = Colors.limeAccent[400];
@@ -39,12 +39,12 @@ class StatsApp extends StatelessWidget {
         //primarySwatch: Colors.black,
         //brightness: Brightness.dark,
         primaryColor: black,
-        accentColor: red,
+        accentColor: green,
         textTheme: TextTheme(
           headline: TextStyle(fontSize: 48.0, fontWeight: FontWeight.w900, fontFamily: 'Monsterrat'),
           title: TextStyle(fontSize: 32.0, fontWeight: FontWeight.bold, fontFamily: 'Monsterrat'),
-          body1: TextStyle(fontSize: 14.0, fontFamily: 'Monsterrat'),
-          button: TextStyle(fontSize: 18.0, fontWeight: FontWeight.w700, fontFamily: 'Monsterrat')
+          body1: TextStyle(fontSize: 14.0, fontFamily: 'Monsterrat', fontWeight: FontWeight.w500),
+          button: TextStyle(fontSize: 18.0, fontWeight: FontWeight.w800, fontFamily: 'Monsterrat')
         ),
       ),
 
